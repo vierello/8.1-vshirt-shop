@@ -15,3 +15,61 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 img {
   max-width: 100%;
 }
+
+.wrapper {
+  background-color: #37D5FF;
+  height: 60px;
+}
+
+header {
+  line-height: 60px;
+  vertical-align: middle;
+  h3{
+  margin: 0;
+  }
+  h3,
+  img,
+  a{
+    margin-left: 16px;
+    vertical-align: middle;
+  }
+  h3,
+  img{
+    display: inline-block;
+  }
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+}
+
+.deal-well {
+  background-color: #37D5FF;
+  margin-top: 26px;
+}
+
+.tile{
+  margin-top: 10px;
+}
+
+.picture {
+  height: 340px;
+  width: 100%;
+}
+
+.price{
+  float: right;
+}
+
+.select-size {
+  border-radius: 0;
+  height: 25px;
+  margin-left: 20px;
+  background-color: white;
+}
+
+.add-to-cart{
+  float: right;
+  line-height: 12px;
+}
