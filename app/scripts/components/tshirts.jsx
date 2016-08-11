@@ -11,10 +11,10 @@ var CartComponent = React.createClass({
 
     var cart = JSON.parse(localStorage.getItem('cartList'));
     //console.log(cart);
-    var fillCart = cart.map(function(cartItem){
-      //console.log(cartItem);
+    var fillCart = cart.map(function(cartItem, index){
+      console.log(cartItem);
       return(
-        <tbody key={cartItem.cid}>
+        <tbody key={index}>
           <tr>
             <td>{cartItem.name}</td>
             <td>{cartItem.size}</td>
@@ -59,10 +59,10 @@ var Shirts = React.createClass({
   render: function(){
     //console.log(this.props.shirts);
     var self = this;
-    var shirts = this.props.shirts.map(function(shirt){
+    var shirts = this.props.shirts.map(function(shirt, index){
       //console.log(shirt);
       return (
-        <div className="tile col-md-4" key={shirt.cid}>
+        <div className="tile col-md-4" key={index}>
           <img className="picture" src={shirt.get('picture')}></img>
           <div>
             <span className="name">{shirt.get('name')}</span>
@@ -129,13 +129,13 @@ var ShirtComponent = React.createClass({
     //console.log(this.state.cartList);
   },
 
-  handleQuantityChange: function(){
+  handleQuantityChange: function(e){
     console.log(this);
-    this.setState({'quantity': this.get.val()})
+    this.setState({'quantity': e.target.value})
   },
 
-  handleSizeChange: function(){
-    this.setState({'size': this.get.val()})
+  handleSizeChange: function(e){
+    this.setState({'size': e.target.value})
   },
 
   render: function(){
